@@ -41,7 +41,7 @@ body {
 	--color-link: #000;
 	--color-link-hover: #F5F5F5;
 	--aspect-ratio: 1/1.5;
-	--imgwidthmax: 500px;
+	--imgwidthmax: 1000px;
 	--size-title: 10rem;
 	--font-weight-title: 400;
 	color: var(--color-text);
@@ -72,8 +72,8 @@ h2{
 	font-family: 'SohneB', sans-serif;
 	
 	font-size: 1.15rem;
-	--aspect-ratio: 1/1.5;
-	--imgwidthmax: 505px;
+	--aspect-ratio: 1/1;
+	--imgwidthmax: 1000px;
 }
 
 /* Page Loader */
@@ -283,7 +283,7 @@ a:focus {
 	grid-area: 1 / 1 / 3 / 3;
 	overflow: hidden;
 	width: var(--imgwidth);
-	padding-bottom: calc(var(--imgwidth) / (var(--aspect-ratio)));
+	padding-bottom: 40vw;
 	will-change: transform;
 }
 
@@ -302,11 +302,23 @@ a:focus {
 
 .content__item-img {
 	--overflow: 40px;
-	height: calc(100% + (2 * var(--overflow)));
+	height: 50vw;
 	top: calc( -1 * var(--overflow));
 	width: 100%;
 	position: absolute;
 	background-size: cover;
+	background-position: 50% 0%;
+	will-change: transform;
+	opacity: 0.8;
+}
+
+.content__item-img .tbg{
+	--overflow: 40px;
+	height: calc(100% + (2 * var(--overflow)));
+	top: calc( -1 * var(--overflow));
+	width: 100%;
+	position: absolute;
+	background-size: auto;
 	background-position: 50% 0%;
 	will-change: transform;
 	opacity: 0.8;
@@ -368,7 +380,7 @@ a:focus {
 .content__item-description {
 	font-family: "SohneB_black", sans-serif;
 	grid-area: 3 / 1 / 3 / 3;
-	width: 120%;
+	width: 80%;
 	position: relative;
 	margin: 0;
 
@@ -414,13 +426,13 @@ a:focus {
 }
 
 .content__item-decobar {
-	width: 140%;
+	width: 120%;
 	height: 50%;
 	top: 0%;
-	left: -20%;
+	left: -10%;
 	position: absolute;
 	background: #637990;
-	/* mix-blend-mode: color-dodge; */
+	 mix-blend-mode: color-dodge; 
 }
 
 .content__item-decobar02 {
